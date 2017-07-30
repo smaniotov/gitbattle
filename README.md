@@ -5,9 +5,9 @@
 ## About
   Esse projeto tem como objetivo efetuar uma "batalha" entre dois usuarios do github.
 
-  A pontuaçao se constitui nas seguintes regras : 
-    1. Star recebida em repositório: 5 pontos/star
-    2. Quantidade de followers: 2 pontos/follower
+A pontuaçao se constitui nas seguintes regras: 
+* Star recebida em repositório: 5 pontos/star
+* Quantidade de followers: 2 pontos/follower
 
 
 

@@ -1,4 +1,4 @@
-#Git Battle
+# Git Battle
 
 Feito com SASS e React.
 
@@ -11,4 +11,4 @@ Objetivos para o projeto :
 - [ ] Melhoria em sua estrutura, no quesito de containers.
 
 
-#Just a Technology Lover
+# Just a Technology Lover

@@ -1,0 +1,69 @@
+@import "../Helpers/variables";
+@import "../Helpers/mixins";
+
+
+.container{
+    width: 50vw;
+    display: inline-block!important;
+}
+.card {
+    margin: auto;
+    margin-top: 2.5%;
+    min-height: 80vh;
+    width: 40vw;
+    background-color: $cardBackgroundColor;
+    display: block;
+    border-radius: 2px;
+    outline: $mainColor;
+    transition: 0.5s all;
+    @include shadow(2);
+    .image {
+      display: block;
+      margin: auto;
+      height: 35vmin;
+      width: 35vmin;
+      border-radius: 50%;
+      @include shadow(1);
+      background-image: url('git.png');
+      background-position: center;
+      background-size: cover;
+      border-bottom: 1px solid transparentize(lighten(black, 10%), 0.4);;
+      overflow: hidden;
+    }
+}
+.winner {
+  @extend .card;
+  @include shadow(4);
+  transform : scale(1.1,1.1);
+}
+.name {
+  @include checkBackground($mainColor, 3);
+  @include unselectable();
+  font-family: 'Satisfy', cursive;
+  font-size: 3.5vmax;
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin-top: 5%;
+}
+.inputField {
+  background-color: inherit;
+  height: 3vh;
+  width: 30%;
+  border-bottom: 2px solid lighten(black, 50%);
+  outline: none;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  transition: 0.5s all;
+  font-size: 2.5vmin;
+  padding: 10px;
+  &:hover {
+    border-bottom: 2px solid darken($mainColor, 30%);
+    width: 35%;
+  }
+  &:focus {
+    border-bottom: 2px solid darken($mainColor, 18%);
+    width: 45%;
+  }
+}

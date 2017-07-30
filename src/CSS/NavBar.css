@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+a {
+  color: inherit;
+  text-decoration: none; }
+
+nav {
+  width: 100vw;
+  min-height: 8vh;
+  background-color: #F44336;
+  border-bottom: 3px solid #ba160a; }
+  nav .item {
+    display: inline-block;
+    min-width: 10%;
+    margin-right: 2%;
+    height: inherit;
+    text-align: center;
+    color: #FAFAFA;
+    font-family: 'Satisfy', cursive;
+    font-size: 4.5vmin;
+    font-weight: lighter;
+    transition: border 0.5; }
+    nav .item:hover {
+      border-bottom: 3px solid #4d4d4d;
+      border-bottom: 3px solid  #FAFAFA; }
+    nav .item .text {
+      margin-top: 10%; }
+
+/*# sourceMappingURL=NavBar.css.map */

@@ -1,0 +1,28 @@
+@import "../Helpers/variables";
+@import "../Helpers/mixins";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+button{
+  font-family: 'Roboto', sans-serif;
+  background-color: $buttonBackground;
+  height: 6vh;
+  width: 20vw;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+  @include checkBackground(lighten($buttonBackground, 10%));
+  @include shadow(2);
+  font-size: 2.8vmin;
+  font-weight: 450;
+  outline : none;
+  transition: all 0.5s;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  &:hover {
+    background-color: darken($buttonBackground, 5%);
+  }
+  &:active {
+    background-color: darken($buttonBackground, 15%);
+  }
+}

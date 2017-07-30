@@ -1,0 +1,32 @@
+@import '../Helpers/variables';
+@import '../Helpers/mixins';
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+a {
+  color: inherit;
+  text-decoration: none;
+}
+nav {
+  width: 100vw;
+  min-height: 8vh;
+  background-color: $mainColor;
+  border-bottom: 3px solid darken($mainColor, 20%);
+  .item {
+    display: inline-block;
+    min-width: 10%;
+    margin-right: 2%;
+    height: inherit;
+    text-align: center;
+    @include checkBackground($mainColor);
+    font-family: 'Satisfy', cursive;
+    font-size: 4.5vmin;
+    font-weight: lighter;
+    transition: border 0.5;
+    &:hover {
+      border-bottom: 3px solid lighten(black, 30%);
+      @include checkBackground($mainColor, 2);
+    }
+    .text{
+      margin-top: 10%;
+    }
+    }
+  }

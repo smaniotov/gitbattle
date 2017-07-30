@@ -1,0 +1,14 @@
+footer {
+  width: 100vw;
+  min-height: 5vh;
+  border-radius: 2px 2px 0 0;
+  text-align: center;
+  background-color: #ba160a;
+  color: #FAFAFA;
+  margin-top: 6.8vh; }
+  footer h1 {
+    margin: 0%;
+    font-weight: lighter;
+    font-family: 'Satisfy', cursive; }
+
+/*# sourceMappingURL=Footer.css.map */

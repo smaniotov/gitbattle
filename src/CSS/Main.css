@@ -1,0 +1,31 @@
+.result-container {
+  position: absolute;
+  top: 45vh;
+  width: 100vw;
+  text-align: center; }
+
+.versus, .result {
+  font-family: 'Satisfy', cursive;
+  color: #ea1c0d;
+  display: block;
+  font-size: 5vmax;
+  margin: auto;
+  transition: font-size 0.5s;
+  align-content: center;
+  color: #F44336; }
+
+.result {
+  color: #0bbcc9;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+#fight {
+  margin-top: 1vh !important;
+  transform: scale(1.5, 1.5);
+  background-color: #f44336;
+  transition: 0.5s all; }
+  #fight:hover {
+    background-color: #d2190b; }
+  #fight:active {
+    background-color: #ba160a; }
+
+/*# sourceMappingURL=Main.css.map */

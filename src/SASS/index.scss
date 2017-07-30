@@ -1,0 +1,12 @@
+@import "Components/App";
+@import "Components/Button";
+@import "Components/card";
+@import "Components/Main";
+@import "Components/NavBar";
+
+body {
+  margin : 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

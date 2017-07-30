@@ -1,0 +1,36 @@
+@import '../Helpers/variables';
+@import "../Helpers/mixins";
+$fightButton : adjust-hue($mainColor, 0deg);
+.result-container{
+  position: absolute;
+  top: 45vh;
+  width: 100vw;
+  text-align: center;
+}
+.versus {
+  font-family: 'Satisfy', cursive;
+  color : darken($mainColor, 10%);
+  display: block;
+  font-size: 5vmax;
+  margin: auto;
+  transition: font-size 0.5s;
+  align-content: center;
+  @include checkBackground($mainColor, 3);
+}
+.result{
+  @extend .versus;
+  color : invert($mainColor);
+  @include shadow(4);
+}
+#fight{
+  margin-top: 1vh!important;
+  transform: scale(1.5, 1.5);
+  background-color: $fightButton;
+  transition: 0.5s all;
+  &:hover {
+    background-color: darken($fightButton, 15%);
+  }
+  &:active {
+    background-color: darken($fightButton, 20%);
+  }
+}

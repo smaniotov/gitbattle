@@ -16,6 +16,8 @@ $fightButton : adjust-hue($mainColor, 0deg);
   transition: font-size 0.5s;
   align-content: center;
   @include checkBackground($mainColor, 3);
+  z-index: 4!important;
+  position: static;
 }
 .result{
   @extend .versus;
@@ -26,11 +28,24 @@ $fightButton : adjust-hue($mainColor, 0deg);
   margin-top: 1vh!important;
   transform: scale(1.5, 1.5);
   background-color: $fightButton;
-  transition: 0.5s all;
+  transition: 0.5s display;
+  z-index: 4!important;
   &:hover {
     background-color: darken($fightButton, 15%);
   }
   &:active {
     background-color: darken($fightButton, 20%);
   }
+}
+.winner-layer {
+  height: 112vh;
+  width: 100vw;
+  background-color: transparentize(white, .2);
+  top: -45vh;
+  margin-top: -58vh;
+  left: 0;
+  transition: all 1s;
+}
+.main {
+  overflow: hidden;
 }

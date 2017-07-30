@@ -54,11 +54,13 @@ class Main extends Component{
     }
   }
   render(){
+    var show = this.state.fight === false ? "none" : "static";
     let mainContent = (
       <div id="mainContent">
         <Card id = "1" winner= {this.state.firstCard}/>
         <div className = "result-container">
           <h1 className = {this.state.result}> {this.state.status} </h1>
+          <div className = "winner-layer" style = {{"display" : show }}></div>
         </div>
         <Card id = "2" winner = {this.state.secondCard}/>
         <Button id = "fight" onClick = {this.handleClick} title = {this.state.title}/>

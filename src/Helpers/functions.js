@@ -14,7 +14,7 @@ export function getUser(value, id, image, state, loading){
         title : account["name"],
         name : (account["name"] != null ? account["name"] : "Usuario sem nome!"),
         status:"S",
-        value : value
+        value : value,
       });
       console.log(value);
     }
@@ -31,7 +31,10 @@ export function getScore(user){
     error : function(i){
       console.log(i);
     },
-    success : function(account){ followers_points = account['followers'] * 2; },
+    success : function(account){
+       followers_points = account['followers'] * 2;
+       console.log(account.repos);
+     },
   });
   $.ajax({
     type : "GET",

@@ -35,6 +35,7 @@
   @extend .card;
   @include shadow(4);
   transform : scale(1.1,1.1);
+  z-index: 5;
 }
 .name {
   @include checkBackground($mainColor, 3);

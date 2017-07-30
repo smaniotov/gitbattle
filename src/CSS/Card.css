@@ -32,7 +32,8 @@
 
 .winner {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  transform: scale(1.1, 1.1); }
+  transform: scale(1.1, 1.1);
+  z-index: 5; }
 
 .name {
   color: #F44336;

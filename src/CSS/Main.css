@@ -12,7 +12,9 @@
   margin: auto;
   transition: font-size 0.5s;
   align-content: center;
-  color: #F44336; }
+  color: #F44336;
+  z-index: 4 !important;
+  position: static; }
 
 .result {
   color: #0bbcc9;
@@ -22,10 +24,23 @@
   margin-top: 1vh !important;
   transform: scale(1.5, 1.5);
   background-color: #f44336;
-  transition: 0.5s all; }
+  transition: 0.5s display;
+  z-index: 4 !important; }
   #fight:hover {
     background-color: #d2190b; }
   #fight:active {
     background-color: #ba160a; }
+
+.winner-layer {
+  height: 112vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: -45vh;
+  margin-top: -58vh;
+  left: 0;
+  transition: all 1s; }
+
+.main {
+  overflow: hidden; }
 
 /*# sourceMappingURL=Main.css.map */

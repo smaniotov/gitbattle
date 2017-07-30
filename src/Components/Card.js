@@ -26,6 +26,7 @@ class Card extends Component{
      }else{
        getUser(value, id, image, state, loading);
        console.log("Triggered")
+       console.log(this.state.title)
      }
 
    };

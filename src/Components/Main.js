@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Card from './Card';
 import Button from './Button';
 import './../CSS/Main.css';
-import { getScore, getWinner } from './../Helpers/functions';
+import { getScore } from './../Helpers/functions';
 import $ from 'jquery';
 
 class Main extends Component{
@@ -14,28 +14,32 @@ class Main extends Component{
 
   handleClick(){
     if (this.state.fight === false) {
-      var firstGit = getScore($('#git-1').val());
-      var secondGit = getScore($('#git-2').val());
-      var id = getWinner(firstGit, secondGit);
-      if (id !== null || id !== undefined) {
-        if (id === 1) {
-          this.setState({
-            firstCard : "winner"
-          });
-        }else if (id === 2) {
-          this.setState({
-            secondCard : "winner"
-          });
-        }else if (id === 0) {
-          this.setState({
-            status : "Empate!!"
+      const firstGit = getScore($('#git-1').val());
+      const secondGit = getScore($('#git-2').val());
+      Promise.all([firstGit, secondGit])
+        .then(winner => {
+          console.log(winner[0].name)
+          console.log(winner[0].score)
+          console.log(winner[1].name)
+          console.log(winner[1].score)
+          if(winner[0].score > winner[1].score){
+            this.setState({
+              firstCard : "winner"
+            });
+          }else if (winner[1].score > winner[0].score){
+            this.setState({
+              secondCard : "winner"
+            });
+          }else {
+            this.setState({
+              status : "Empate!!"
           });
         }
+      })
         this.setState({
           fight: !(this.state.fight),
           title : "Limpar"
         })
-      }
     }else {
       this.setState({
         firstCard : "card",
@@ -47,6 +51,7 @@ class Main extends Component{
     }
 
   }
+
   componentWillUpdate(nextProps, nextState){
     var id = nextState.winner;
     if (id === 1){

@@ -11,7 +11,7 @@ class Card extends Component{
     this.handleClick = this.handleClick.bind(this);
     this.state = {
       link : "https://github.com/", title : "GitHub",
-      name : "Insira o usuário!",
+      name : "Insira o usuário!!!",
       value : null,
       status : "N",
       response : ""

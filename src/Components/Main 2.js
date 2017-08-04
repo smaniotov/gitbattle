@@ -9,13 +9,7 @@ class Main extends Component{
   constructor(props){
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      title : "Fight!",
-      firstCard : "card" ,
-      secondCard : "card",
-      status : "Vs.",
-      result : "versus",
-      fight : false};
+    this.state = {title : "Fight!", firstCard : "card" , secondCard : "card", status : "Vs.", result : "versus", fight : false};
   }
 
   handleClick(){
